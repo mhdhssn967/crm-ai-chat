@@ -51,7 +51,7 @@ app.post('/chat/:companyId', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Server is running with openAi turbo');
+  res.send('Server is running with llama-3.3-70b-versatile');
 });
 
 app.listen(PORT, () => {

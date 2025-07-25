@@ -40,7 +40,7 @@ async function askGroqWithPrompt(csvData, userQuestion) {
     const systemPrompt = `You are a CRM assistant. The following is a CSV of client data:\n\n${csvData}\n\nUse this to answer the user's question. Other data such as phone number and email are availabel to the user in the record table`;
 
     const response = await axios.post(API_URL, {
-      model: 'llama-3.3-70b-versatile',
+      model: 'whisper-large-v3-turbo',
       messages: [
         { role: 'system', content: systemPrompt },
         { role: 'user', content: userQuestion }

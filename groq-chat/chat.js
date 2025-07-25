@@ -8,11 +8,10 @@ dotenv.config({
 
 const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
-const crmId = 'Ovq274qYz5f065l6zbzMRafVFfl1';
 
 async function fetchCRMData(id) {
   try {
-    const response = await axios.get(`http://localhost:3001/crm/${id}`);
+    const response = await axios.get(`https://crm-ai-chat.onrender.com/crm/${id}`);
     return response.data || [];
   } catch (error) {
     console.error('❌ Error fetching CRM data:', error.message);

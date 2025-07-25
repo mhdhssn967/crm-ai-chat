@@ -55,7 +55,7 @@ async function askGroqWithPrompt(csvData, userQuestion) {
     return response.data.choices[0].message.content;
   } catch (error) {
     console.error('❌ Error from Groq:', error.message);
-    return '[Error in processing data]';
+    return 'Sorry, I am not able to process data now. Please try again later.';
   }
 }
 
